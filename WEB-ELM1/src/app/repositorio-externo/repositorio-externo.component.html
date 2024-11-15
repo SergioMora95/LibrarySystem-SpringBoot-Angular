@@ -1,0 +1,175 @@
+<div class="row mb-4">
+  <div class="col-md-12 mb-4">
+    <div class="card text-left">
+      <div class="card-body">
+        <h1 class="card-title mb-3">Repositorio Externo</h1>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="openAddDialog()"
+          *ngIf="isAdmin"
+        >
+          <span class="ul-btn__icon" style="color: green"
+            ><i class="i-Add"></i
+          ></span>
+          <span class="ul-btn__text"> Agregar</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          *ngIf="isAdmin"
+          [disabled]="!selectedRepositorioExterno"
+          (click)="editarSeleccionado()"
+        >
+          <span class="ul-btn__icon" style="color: orange"
+            ><i class="i-Pen-5"></i
+          ></span>
+          <span class="ul-btn__text"> Editar</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          *ngIf="isAdmin"
+          [disabled]="!selectedRepositorioExterno"
+          (click)="eliminarSeleccionado()"
+        >
+          <span class="ul-btn__icon" style="color: red"
+            ><i class="i-Remove"></i
+          ></span>
+          <span class="ul-btn__text"> Eliminar</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="actualizarTabla()"
+        >
+          <span class="ul-btn__icon" style="color: blue"
+            ><i class="i-Repeat-3"></i
+          ></span>
+          <span class="ul-btn__text"> Actualizar Tabla</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="exportToExcel()"
+        >
+          <span class="ul-btn__icon" style="color: green"
+            ><i class="i-File-Excel"></i
+          ></span>
+          <span class="ul-btn__text"> Excel</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="exportToPdf()"
+        >
+          <span class="ul-btn__icon" style="color: red"
+            ><i class="i-File"></i
+          ></span>
+          <span class="ul-btn__text"> Pdf</span>
+        </button>
+        <mat-form-field style="float: right" appearance="standard">
+          <mat-label
+            >Buscar<i
+              class="search-icon text-muted i-Magnifi-Glass1"
+              style="float: right"
+            ></i
+          ></mat-label>
+
+          <input
+            matInput
+            (keyup)="applyFilter($event)"
+            placeholder="Escribe para filtrar..."
+          />
+        </mat-form-field>
+        <h4 class="card-title mb-3"></h4>
+        <div class="table-responsive">
+          <div class="mat-elevation-z8">
+            <div style="position: relative">
+              <div
+                *ngIf="isLoading"
+                class="loadingio-spinner-spinner-9os9dkbppo"
+              >
+                <div class="ldio-tb9ijrw9hk">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div id="Tablarepositorioexterno">
+                <table
+                  mat-table
+                  [dataSource]="dataSource"
+                  class="mat-elevation-z8"
+                  matSort
+                >
+                  <!-- ID Column -->
+                  <ng-container matColumnDef="idRepositorio">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.idRepositorio }}
+                    </td>
+                  </ng-container>
+
+                  <!-- Nombre Column -->
+                  <ng-container matColumnDef="urlRepositorio">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Url
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      <a [href]="element.urlRepositorio" target="_blank" style="font-size: 18px; font-weight: bold; text-decoration: none;">
+                        <span style="position: relative;">
+                          Ir al repositorio
+                          <span style="position: absolute; width: 100%; height: 2px; bottom: 0; left: 0; background-color: blue; transform: scaleX(0); transition: transform 0.3s;"></span>
+                        </span>
+                      </a>
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="descripcionRepositorio">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Descripción
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.descripcionRepositorio }}
+                    </td>
+                  </ng-container>
+                  <ng-container matColumnDef="fechaCarga">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Fecha
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.fechaCarga | date: 'dd-MM-yyyy':'+0500' }}
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr
+                    mat-row
+                    *matRowDef="let row; columns: displayedColumns"
+                    (click)="selectRepositorioExterno(row)"
+                    [class.selected]="row === selectedRepositorioExterno"
+                  ></tr>
+                </table>
+              </div>
+            </div>
+
+            <mat-paginator
+              [pageSizeOptions]="[5, 10, 20]"
+              showFirstLastButtons
+            ></mat-paginator>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,401 @@
+<div class="row mb-4">
+  <div class="col-md-12 mb-4">
+    <div class="card text-left">
+      <div class="card-body">
+        <h1 class="card-title mb-3">Prestamos</h1>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="openAddDialog()"
+          *ngIf="isAdmin"
+        >
+          <span class="ul-btn__icon" style="color: green"
+            ><i class="i-Add"></i
+          ></span>
+          <span class="ul-btn__text"> Agregar</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          *ngIf="isAdmin"
+          [disabled]="!selectedPrestamo"
+          (click)="editarSeleccionado()"
+        >
+          <span class="ul-btn__icon" style="color: orange"
+            ><i class="i-Pen-5"></i
+          ></span>
+          <span class="ul-btn__text"> Editar</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          *ngIf="isAdmin"
+          [disabled]="!selectedPrestamo"
+          (click)="eliminarSeleccionado()"
+        >
+          <span class="ul-btn__icon" style="color: red"
+            ><i class="i-Remove"></i
+          ></span>
+          <span class="ul-btn__text"> Eliminar</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="actualizarTabla()"
+        >
+          <span class="ul-btn__icon" style="color: blue"
+            ><i class="i-Repeat-3"></i
+          ></span>
+          <span class="ul-btn__text"> Actualizar Tabla</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="exportToExcel()"
+        >
+          <span class="ul-btn__icon" style="color: green"
+            ><i class="i-File-Excel"></i
+          ></span>
+          <span class="ul-btn__text"> Excel</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="exportToPdf()"
+        >
+          <span class="ul-btn__icon" style="color: red"
+            ><i class="i-File"></i
+          ></span>
+          <span class="ul-btn__text"> Pdf</span>
+        </button>
+        <select
+          style="width: 15%"
+          *ngIf="isAdmin"
+          class="custom-select"
+          (change)="onOptionSelected($event)"
+        >
+          <option value="Todos">Todos</option>
+          <option value="prestado">Prestado</option>
+          <option value="noDevuelto">Sin retorno</option>
+          <option value="Devuelto">Devuelto</option>
+        </select>
+
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          *ngIf="!isAdmin"
+          [disabled]="
+            !selectedPrestamo || selectedPrestamo.estadoPrestamo !== 'Prestado'
+          "
+          (click)="renovarPrestamo()"
+        >
+          <span class="ul-btn__icon" style="color: green"></span>
+          <span class="ul-btn__text">Renovar</span>
+        </button>
+
+        <mat-form-field style="float: right" appearance="standard">
+          <mat-label
+            >Buscar<i
+              class="search-icon text-muted i-Magnifi-Glass1"
+              style="float: right"
+            ></i
+          ></mat-label>
+
+          <input
+            matInput
+            (keyup)="applyFilter($event)"
+            placeholder="Escribe para filtrar..."
+          />
+        </mat-form-field>
+        <h4 class="card-title mb-3"></h4>
+        <div class="table-responsive">
+          <div class="mat-elevation-z8">
+            <div style="position: relative">
+              <div
+                *ngIf="isLoading"
+                class="loadingio-spinner-spinner-9os9dkbppo"
+              >
+                <div class="ldio-tb9ijrw9hk">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div id="Tablaprestamo">
+                <table
+                  mat-table
+                  [dataSource]="dataSource"
+                  class="mat-elevation-z8"
+                  matSort
+                >
+                  <!-- ID Column -->
+                  <ng-container matColumnDef="idPrestamo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.idPrestamo }}
+                    </td>
+                  </ng-container>
+
+                  <!-- Nombre Column -->
+                  <ng-container matColumnDef="cantidadPrestamo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Cantidad
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.cantidadPrestamo }}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="fechaPrestamo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Fecha Prestamo
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.fechaPrestamo | date: 'dd-MM-yyyy':'+0500' }}
+                    </td>
+                  </ng-container>
+                  <ng-container matColumnDef="fechaDevolucion">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Fecha Devolución
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.fechaDevolucion | date: 'dd-MM-yyyy':'+0500' }}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="observacionPrestamo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      observación
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.observacionPrestamo }}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="estadoPrestamo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Estado</th>
+                    <td mat-cell *matCellDef="let element" [ngClass]="{
+                      'estado-prestado': element.estadoPrestamo === 'Prestado',
+                      'estado-devuelto': element.estadoPrestamo === 'Devuelto',
+                      'estado-sin-retorno': element.estadoPrestamo === 'noDevuelto'
+                    }">
+                      {{ element.estadoPrestamo }}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="libro">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      libro
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.libro ? element.libro.tituloLibro : "" }}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="usuario">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Nombre
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.usuario ? element.usuario.nombre : "" }}
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr
+                    mat-row
+                    *matRowDef="let row; columns: displayedColumns"
+                    (click)="selectPrestamo(row)"
+                    [class.selected]="row === selectedPrestamo"
+                  ></tr>
+                </table>
+              </div>
+            </div>
+
+            <mat-paginator
+              [pageSizeOptions]="[5, 10, 20]"
+              showFirstLastButtons
+            ></mat-paginator>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          [disabled]="
+            !isAdmin ||
+            !selectedPrestamo ||
+            selectedPrestamo.estadoPrestamo !== 'noDevuelto'
+          "
+          *ngIf="isAdmin"
+          (click)="selectedPrestamo && enviarCorreo(selectedPrestamo)"
+        >
+          <span class="ul-btn__icon" style="color: blue"
+            ><i class="i-Mail-Forward"></i
+          ></span>
+          <span class="ul-btn__text"> Enviar Correo</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mb-4" *ngIf="isAdmin">
+  <div class="col-md-12 mb-4">
+    <div class="card text-left">
+      <div class="card-body">
+        <h1 class="card-title mb-3">Historial Prestamos</h1>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="actualizarTablaHistorial()"
+        >
+          <span class="ul-btn__icon" style="color: blue"
+            ><i class="i-Repeat-3"></i
+          ></span>
+          <span class="ul-btn__text"> Actualizar Tabla</span>
+        </button>
+        <button
+          type="button"
+          class="btn btn-raised btn-raised-secondary m-2"
+          (click)="exportToExcelHistorial()"
+        >
+          <span class="ul-btn__icon" style="color: green"
+            ><i class="i-File-Excel"></i
+          ></span>
+          <span class="ul-btn__text"> Excel</span>
+        </button>
+
+        <mat-form-field style="float: right" appearance="standard">
+          <mat-label
+            >Buscar<i
+              class="search-icon text-muted i-Magnifi-Glass1"
+              style="float: right"
+            ></i
+          ></mat-label>
+
+          <input
+            matInput
+            (keyup)="applyFilterHistorial($event)"
+            placeholder="Escribe para filtrar..."
+          />
+        </mat-form-field>
+        <h4 class="card-title mb-3"></h4>
+        <div class="table-responsive">
+          <div class="mat-elevation-z8">
+            <div style="position: relative">
+              <div
+                *ngIf="isLoading"
+                class="loadingio-spinner-spinner-9os9dkbppo"
+              >
+                <div class="ldio-tb9ijrw9hk">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div id="TablaHistorialprestamo">
+                <table
+                  mat-table
+                  [dataSource]="dataSourceHistorial"
+                  class="mat-elevation-z8"
+                  matSort
+                >
+                  <!-- ID Column -->
+                  <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.id }}
+                    </td>
+                  </ng-container>
+
+                  <!-- Nombre Column -->
+                  <ng-container matColumnDef="prestamo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Prestamo
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.prestamo.idPrestamo }}
+                    </td>
+                  </ng-container>
+                  <ng-container matColumnDef="fechaCambio">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Fecha Cambio
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.fechaCambio | date: 'dd-MM-yyyy':'+0500' }}
+                    </td>
+                  </ng-container>
+                  <ng-container matColumnDef="estadoAnterior">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Estado Anterior
+                    </th>
+                    <td mat-cell *matCellDef="let element" [ngClass]="{
+                      'estado-prestado': element.estadoAnterior === 'Prestado',
+                      'estado-devuelto': element.estadoAnterior === 'Devuelto',
+                      'estado-sin-retorno': element.estadoAnterior === 'noDevuelto'
+                    }">
+                      {{ element.estadoAnterior }}
+                    </td>
+                  </ng-container>
+                  <ng-container matColumnDef="estadoNuevo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Estado Nuevo
+                    </th>
+                    <td mat-cell *matCellDef="let element" [ngClass]="{
+                      'estado-prestado': element.estadoNuevo === 'Prestado',
+                      'estado-devuelto': element.estadoNuevo === 'Devuelto',
+                      'estado-sin-retorno': element.estadoNuevo === 'noDevuelto'
+                    }">
+                      {{ element.estadoNuevo }}
+                    </td>
+                  </ng-container>
+                  <ng-container matColumnDef="descripcion">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                      Descripción
+                    </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{ element.descripcion }}
+                    </td>
+                  </ng-container>
+
+                  <tr
+                    mat-header-row
+                    *matHeaderRowDef="displayedColumnsHistorial"
+                  ></tr>
+                  <tr
+                    mat-row
+                    *matRowDef="let row; columns: displayedColumnsHistorial"
+                  ></tr>
+                </table>
+              </div>
+            </div>
+
+            <mat-paginator
+              [pageSizeOptions]="[5, 10, 20]"
+              showFirstLastButtons
+            ></mat-paginator>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

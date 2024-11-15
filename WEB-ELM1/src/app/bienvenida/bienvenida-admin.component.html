@@ -1,0 +1,96 @@
+<h2>Prestamos</h2>
+<div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+      <div class="card-body text-center">
+        <i class="i-Eyeglasses-Smiley"></i>
+        <div class="content">
+          <p class="text-muted mt-2 mb-0">Todos</p>
+          <p class="text-primary text-24 line-height-1 mb-2">
+            {{ prestamosTodos }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+      <div class="card-body text-center">
+        <i class="i-Thumbs-Up-Smiley"></i>
+        <div class="content">
+          <p class="text-muted mt-2 mb-0">Prestados</p>
+          <p class="text-primary text-24 line-height-1 mb-2">
+            {{ prestamosPrestados }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+      <div class="card-body text-center">
+        <i class="i-Surprise"></i>
+        <div class="content">
+          <p class="text-muted mt-2 mb-0">Sin retorno</p>
+          <p class="text-primary text-24 line-height-1 mb-2">
+            {{ prestamosNoDevueltos }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+      <div class="card-body text-center">
+        <i class="i-Happy"></i>
+        <div class="content">
+          <p class="text-muted mt-2 mb-0">Devueltos</p>
+          <p class="text-primary text-24 line-height-1 mb-2">
+            {{ prestamosDevueltos }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Estadísticas</h2>
+<div class="row">
+  <div class="col-lg-16 col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-title">Prestamos</div>
+        <div style="height: 300px; overflow: hidden">
+          <!-- Define un div contenedor con altura fija -->
+          <ngx-charts-bar-vertical
+            [results]="barChartData"
+            [xAxis]="true"
+            [yAxis]="true"
+            [legend]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            xAxisLabel="Tipo de Prestamo"
+            yAxisLabel="Cantidad"
+          >
+          </ngx-charts-bar-vertical>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-16 col-sm-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-title">Libros</div>
+        <div style="height: 300px; overflow: hidden">
+          <!-- Define un div contenedor con altura fija y desbordamiento oculto -->
+          <ngx-charts-pie-grid [results]="pieChartData" [animations]="true">
+          </ngx-charts-pie-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

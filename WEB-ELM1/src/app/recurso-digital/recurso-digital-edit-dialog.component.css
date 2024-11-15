@@ -1,0 +1,58 @@
+.form-dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    /* Espaciado entre campos */
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15%;
+    /* Espaciado entre campos en la misma fila */
+}
+
+.form-field {
+    flex: 1;
+    /* Los campos ocuparán todo el espacio posible */
+    min-width: 150px;
+}
+
+/* Estilos para los botones de cargar */
+.mat-button {
+    background-color: #007bff;
+    /* Color de fondo */
+    color: #fff;
+    /* Color del texto */
+    border: none;
+    /* Eliminar borde */
+    border-radius: 4px;
+    /* Borde redondeado */
+    padding: 8px 16px;
+    /* Espaciado interno */
+    margin-left: 8px;
+    /* Espaciado externo */
+    cursor: pointer;
+    /* Cursor de ratón */
+}
+
+.mat-button:hover {
+    background-color: #0056b3;
+    /* Color de fondo al pasar el ratón */
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+}
+
+.form-field {
+    flex: 1;
+    margin-right: 10px;
+    /* Ajusta el margen derecho para separar los campos */
+}
+
+.preview-image {
+    margin-right: 10px;
+    /* Ajusta el margen derecho para separar la imagen del botón de carga */
+}

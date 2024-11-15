@@ -1,0 +1,76 @@
+<h1 mat-dialog-title>Editar Libro</h1>
+<div mat-dialog-content>
+  <form [formGroup]="editForm" (ngSubmit)="onSave()" class="form-dialog">
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Título del libro</mat-label>
+        <input matInput formControlName="tituloLibro" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Cantidad</mat-label>
+        <input matInput formControlName="cantidadLibro" type="number" />
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="descripcionLibro"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Estado del libro</mat-label>
+        <mat-select formControlName="estadoLibro">
+          <mat-option value="Disponible">Disponible</mat-option>
+          <mat-option value="Agotado">Agotado</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Autor</mat-label>
+        <mat-select formControlName="autorId">
+          <mat-option *ngFor="let autor of autores" [value]="autor.idAutor">
+            {{ autor.nombreAutor }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Editorial</mat-label>
+        <mat-select formControlName="editorialId">
+          <mat-option
+            *ngFor="let editorial of editoriales"
+            [value]="editorial.idEditorial"
+          >
+            {{ editorial.nombreEditorial }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Categoría</mat-label>
+        <mat-select formControlName="categoriaId">
+          <mat-option
+            *ngFor="let categoria of categorias"
+            [value]="categoria.idCategoria"
+          >
+            {{ categoria.nombreCategoria }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions style="float: right">
+  <button type="button" class="btn btn-secondary" (click)="onClose()">
+    Cerrar
+  </button>
+  <button
+    type="submit"
+    class="btn btn-primary ml-2"
+    [disabled]="!editForm.valid"
+    (click)="onSave()"
+  >
+    Guardar
+  </button>
+</div>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recordatorio de Devolución - Easy Library Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333333;
+        }
+        h3 {
+            color: #007bff;
+        }
+        h4 {
+            color: #555555;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>AVISO IMPORTANTE</h2>
+    <h3>Hola, <span th:text="${userName}"></span></h3>
+    <p>Nos gustaría recordarte que tienes pendiente la devolución del libro que prestaste en Easy Library Manager.</p>
+    <p>Por favor, asegúrate de devolverlo lo antes posible para evitar retrasos y cargos adicionales.</p>
+    <p>Gracias por tu cooperación y comprensión.</p>
+    <p>Atentamente,</p>
+    <p>Equipo de Easy Library Manager</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Confirmar Eliminación</h2>
+<div mat-dialog-content>
+  ¿Está seguro de que desea eliminar la categoria "{{
+    data.categoria.nombreCategoria
+  }}"?
+</div>
+<div mat-dialog-actions>
+  <button type="button" class="btn btn-secondary" (click)="cancelDelete()">
+    Cancelar
+  </button>
+  <button type="submit" class="btn btn-primary ml-2" (click)="confirmDelete()">
+    Eliminar
+  </button>
+</div>

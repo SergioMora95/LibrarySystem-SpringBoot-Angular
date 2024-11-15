@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Editar Recurso Video</h1>
+<div mat-dialog-content>
+  <form [formGroup]="editForm" (ngSubmit)="onSave()" class="form-dialog">
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Url Video</mat-label>
+        <input matInput formControlName="urlVideo" (change)="updateVideoId()" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Categoría</mat-label>
+        <mat-select formControlName="categoriaId">
+          <mat-option
+            *ngFor="let categoria of categorias"
+            [value]="categoria.idCategoria"
+          >
+            {{ categoria.nombreCategoria }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <input matInput formControlName="descripcionVideo" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha Carga</mat-label>
+        <input matInput formControlName="fechaCarga" type="date" />
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<!-- Vista previa del video -->
+<div class="video-preview-container">
+  <h2>Vista Previa del Video</h2>
+  <youtube-player [videoId]="videoId" [height]="200" [width]="310"></youtube-player>
+</div>
+
+<div mat-dialog-actions style="float: right">
+  <button type="button" class="btn btn-secondary" (click)="onClose()">
+    Cerrar
+  </button>
+  <button
+    type="submit"
+    class="btn btn-primary ml-2"
+    [disabled]="!editForm.valid"
+    (click)="onSave()"
+  >
+    Guardar
+  </button>
+</div>

@@ -1,0 +1,275 @@
+<div class="app-admin-wrap layout-sidebar-large clearfix">
+  <div class="main-header">
+    <div class="logo">
+      <img
+        src="./assets/images/logo.png"
+        alt="Logo.png"
+        style="width: 60% !important"
+      />
+    </div>
+
+    <div class="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div *ngIf="isAdmin"><a routerLink="/admin" ><i class="i-Shop"></i> </a></div>
+
+    <div style="margin: auto">
+      <h2>
+        ✨ Welcome <span style="color: blue">{{ nombreUsuario }}</span> ✨
+      </h2>
+    </div>
+
+    <div class="header-part-right">
+      <!-- Full screen toggle -->
+      <i
+        class="i-Full-Screen header-icon d-none d-sm-inline-block"
+        data-fullscreen
+      ></i>
+      <!-- Grid menu Dropdown -->
+      <div class="dropdown">
+        <i
+          class="i-Safe-Box text-muted header-icon"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          role="button"
+          aria-expanded="false"
+        ></i>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <div class="menu-icon-grid">
+            <a routerLink="/libros/lista"><i class="i-Book"></i> Libros</a>
+            <a routerLink="/prestamos/lista"
+              ><i class="i-Library"></i> Prestamos</a
+            >
+            <a routerLink="/repositorioexterno/lista"
+              ><i class="i-University1"></i> Repositorio Externo</a
+            >
+            <a routerLink="/recursodigital/lista"
+              ><i class="i-File-Word"> </i> Recurso Digital</a
+            >
+            <a routerLink="/autores/lista" *ngIf="isAdmin"
+              ><i class="i-Business-Mens"></i> Autores</a
+            >
+            <a routerLink="/categorias/lista" *ngIf="isAdmin"
+              ><i class="i-Receipt-3"></i> Categorias</a
+            >
+            <a routerLink="/autores" *ngIf="isAdmin"
+              ><i class="i-Receipt-4" routerLink="/editoriales/lista"></i>
+              Editoriales</a
+            >
+            <a routerLink="/recursovideo/lista"
+              ><i class="i-Video"></i> Recurso Video</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Notificaiton
+      <div class="dropdown">
+        <div
+          class="badge-top-container"
+          id="dropdownNotification"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="badge badge-primary">3</span>
+          <i class="i-Bell text-muted header-icon"></i>
+        </div>
+        
+        <div
+          class="dropdown-menu rtl-ps-none dropdown-menu-right notification-dropdown"
+          aria-labelledby="dropdownNotification"
+          data-perfect-scrollbar
+          data-suppress-scroll-x="true"
+        >
+          <div class="dropdown-item d-flex">
+            <div class="notification-icon">
+              <i class="i-Speach-Bubble-6 text-primary mr-1"></i>
+            </div>
+            <div class="notification-details flex-grow-1">
+              <p class="m-0 d-flex align-items-center">
+                <span>New message</span>
+                <span class="badge badge-pill badge-primary ml-1 mr-1"
+                  >new</span
+                >
+                <span class="flex-grow-1"></span>
+                <span class="text-small text-muted ml-auto">10 sec ago</span>
+              </p>
+              <p class="text-small text-muted m-0">James: Hey! are you busy?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+       Notificaiton End -->
+
+      <!-- User avatar dropdown -->
+      <div class="dropdown">
+        <div class="user col align-self-end">
+          <img
+            src="./assets/images/faces/1.jpg"
+            id="userDropdown"
+            alt=""
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          />
+
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            aria-labelledby="userDropdown"
+          >
+            <div class="dropdown-header">
+              <i class="i-Lock-User mr-1"></i>{{ nombreUsuario }}
+            </div>
+            <!--<a class="dropdown-item">Perfil</a> -->
+            <a class="dropdown-item" *ngIf="isLogged" (click)="onLogOut()"
+              >Salir</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- header top menu end -->
+
+  <div class="side-content-wrap">
+    <div
+  #sidebar
+  class="sidebar-left open rtl-ps-none"
+  data-suppress-scroll-x="true"
+>
+      <ul class="navigation-left">
+        <li class="nav-item" data-item="uikits">
+          <a class="nav-item-hold" *ngIf="isLogged" routerLink="/libros/lista">
+            <i class="nav-icon i-Book"></i>
+            <span class="nav-text">Libros</span>
+          </a>
+          <div class="triangle"></div>
+        </li>
+        <li class="nav-item" data-item="widgets">
+          <a
+            class="nav-item-hold"
+            *ngIf="isLogged"
+            routerLink="/prestamos/lista"
+          >
+            <i class="nav-icon i-Address-Book"></i>
+            <span class="nav-text">Préstamos</span>
+          </a>
+          <div class="triangle"></div>
+        </li>
+        <li class="nav-item" data-item="dashboard">
+          <a
+            class="nav-item-hold"
+            *ngIf="isLogged"
+            routerLink="/repositorioexterno/lista"
+          >
+            <i class="nav-icon i-University1"></i>
+            <span class="nav-text">Repositorio Externo</span>
+          </a>
+          <div class="triangle"></div>
+        </li>
+        <li class="nav-item" data-item="charts">
+          <a
+            class="nav-item-hold"
+            *ngIf="isLogged"
+            routerLink="/recursodigital/lista"
+          >
+            <i class="nav-icon i-File-Word"></i>
+            <span class="nav-text">Recurso Digital</span>
+          </a>
+          <div class="triangle"></div>
+        </li>
+        <li class="nav-item" data-item="dashboard" *ngIf="isAdmin">
+          <a class="nav-item-hold" *ngIf="isLogged" routerLink="/autores/lista">
+            <i class="nav-icon i-Business-Mens"></i>
+            <span class="nav-text">Autores</span>
+          </a>
+          <div class="triangle"></div>
+        </li>
+        <li class="nav-item" data-item="extrakits" *ngIf="isAdmin">
+          <a
+            class="nav-item-hold"
+            *ngIf="isLogged"
+            routerLink="/categorias/lista"
+          >
+            <i class="nav-icon i-Receipt-3"></i>
+            <span class="nav-text">Categorías</span>
+          </a>
+          <div class="triangle"></div>
+        </li>
+        <li class="nav-item" data-item="apps" *ngIf="isAdmin">
+          <a
+            class="nav-item-hold"
+            *ngIf="isLogged"
+            routerLink="/editoriales/lista"
+          >
+            <i class="nav-icon i-Receipt-4"></i>
+            <span class="nav-text">Editoriales</span>
+          </a>
+          <div class="triangle"></div>
+        </li>
+        <li class="nav-item" data-item="forms" routerLink="/recursovideo/lista">
+          <a class="nav-item-hold" *ngIf="isLogged">
+            <i class="nav-icon i-Video"></i>
+            <span class="nav-text">Recurso Video</span>
+          </a>
+          <div class="triangle"></div>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="main-content-wrap sidenav-open d-flex flex-column">
+      <div class="main-content">
+        <div class="breadcrumb">
+          <h1>..</h1>
+          <ul>
+            <li><a href="">...</a></li>
+            <li>..</li>
+          </ul>
+        </div>
+
+        <router-outlet></router-outlet>
+        <!-- Footer Start -->
+        <div class="flex-grow-1"></div>
+        <div class="app-footer">
+          <div class="row">
+            <div class="col-md-9">
+              <p>
+                <strong>Easy Library Manager</strong>
+              </p>
+              <p>
+                Una biblioteca es un santuario del saber, donde estantes llenos
+                de libros invitan a la exploración de mundos desconocidos... Es
+                un lugar de silencio y estudio, iluminado suavemente, diseñado
+                para sumergirse en la lectura y el aprendizaje.
+              </p>
+            </div>
+          </div>
+          <div
+            class="footer-bottom border-top pt-3 d-flex flex-column flex-sm-row align-items-center"
+          >
+            <span class="flex-grow-1"></span>
+            <div class="d-flex align-items-center">
+              <img class="logo" src="./assets/images/logo.png" alt="" />
+              <div>
+                <p class="m-0">&copy; 2024 Easy Library Team</p>
+                <p class="m-0">All rights reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fotter end -->
+      </div>
+    </div>
+  </div>
+</div>
+<!--<script src="../../assets/js/sidebar.large.script.min.js"></script>
+<script src="../../assets/js/jquery-3.3.1.min.js"></script>
+<script src="../../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/js/perfect-scrollbar.min.js"></script>
+<script src="../../assets/js/script.min.js"></script>-->

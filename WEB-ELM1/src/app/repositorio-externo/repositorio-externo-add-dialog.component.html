@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>Agregar Repositorio Externo</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="onSave()" class="form-dialog">
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Url</mat-label>
+        <input matInput formControlName="urlRepositorio" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Descripción</mat-label>
+        <input matInput formControlName="descripcionRepositorio" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha Carga</mat-label>
+        <input matInput formControlName="fechaCarga" type="date" />
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions style="float: right">
+  <button type="button" class="btn btn-secondary" (click)="onClose()">
+    Cerrar
+  </button>
+  <button
+    type="submit"
+    class="btn btn-primary ml-2"
+    [disabled]="!form.valid"
+    (click)="onSave()"
+  >
+    Guardar
+  </button>
+</div>

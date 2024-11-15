@@ -1,0 +1,19 @@
+.form-dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    /* Espaciado entre campos */
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15%;
+    /* Espaciado entre campos en la misma fila */
+}
+
+.form-field {
+    flex: 1;
+    /* Los campos ocuparán todo el espacio posible */
+    min-width: 150px;
+}

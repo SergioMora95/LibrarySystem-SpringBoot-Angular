@@ -1,0 +1,90 @@
+<h1 mat-dialog-title>Agregar Prestamo</h1>
+<div mat-dialog-content>
+  <form
+    *ngIf="form"
+    [formGroup]="form"
+    (ngSubmit)="onSave()"
+    class="form-dialog"
+  >
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Cantidad</mat-label>
+        <input matInput formControlName="cantidadPrestamo" type="number" />
+        <mat-error *ngIf="form.get('cantidadPrestamo')?.invalid">
+          La cantidad debe ser mayor que 0.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha prestamo</mat-label>
+        <input matInput formControlName="fechaPrestamo" type="text" readonly />
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha Devolución</mat-label>
+        <input matInput formControlName="fechaDevolucion" type="date" />
+        <mat-error *ngIf="form.get('fechaDevolucion')?.invalid">
+          La fecha de devolución debe ser posterior a la fecha actual.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Observación Prestamo</mat-label>
+        <textarea matInput formControlName="observacionPrestamo"></textarea>
+        <mat-error *ngIf="form.get('observacionPrestamo')?.invalid">
+          La observación es requerida.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Estado del Prestamo</mat-label>
+        <mat-select formControlName="estadoPrestamo">
+          <mat-option value="Prestado">Prestado</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('estadoPrestamo')?.invalid">
+          El estado del préstamo es requerido.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <mat-select formControlName="id">
+          <mat-option *ngFor="let usuario of usuario" [value]="usuario.id">
+            {{ usuario.nombre }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('id')?.invalid">
+          El usuario es requerido.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill">
+        <mat-label>Libro</mat-label>
+        <mat-select formControlName="libro">
+          <mat-option *ngFor="let libro of libro" [value]="libro.idLibro">
+            {{ libro.tituloLibro }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('libro')?.invalid">
+          El libro es requerido.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+
+<div mat-dialog-actions style="float: right">
+  <button type="button" class="btn btn-secondary" (click)="onClose()">
+    Cerrar
+  </button>
+  <button
+    type="submit"
+    class="btn btn-primary ml-2"
+    [disabled]="!form.valid"
+    (click)="onSave()"
+  >
+    Guardar
+  </button>
+</div>

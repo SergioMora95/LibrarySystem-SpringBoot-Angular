@@ -1,0 +1,92 @@
+<h1 mat-dialog-title>Editar Recurso Digital</h1>
+<div mat-dialog-content class="form-content">
+  <form [formGroup]="editForm" (ngSubmit)="onSave()" class="form-dialog">
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombreRecurso" />
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Imagen</mat-label>
+        <input matInput formControlName="imagenRecurso" style="display: none" />
+      </mat-form-field>
+      <input
+        hidden
+        type="file"
+        #fileInput1
+        (change)="upload($event, true)"
+        accept="image/*"
+      />
+      <button type="button" mat-button matSuffix (click)="fileInput1.click()">
+        Cargar
+      </button>
+      <img *ngIf="url1" [src]="url1" width="100" height="100" />
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Archivo</mat-label>
+        <input
+          matInput
+          formControlName="archivoRecurso"
+          style="display: none"
+        />
+      </mat-form-field>
+      <input
+        hidden
+        type="file"
+        #fileInput2
+        (change)="upload($event, false)"
+        accept=".pdf, .doc, .docx"
+      />
+      <button type="button" mat-button matSuffix (click)="fileInput2.click()">
+        Cargar
+      </button>
+      <a *ngIf="url2" [href]="url2" target="_blank">Ver Archivo</a>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Estado</mat-label>
+        <mat-select formControlName="estadoRecursoDigital">
+          <mat-option value="Disponible">Disponible</mat-option>
+          <mat-option value="Agotado">Agotado</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Autor</mat-label>
+        <mat-select formControlName="autorId">
+          <mat-option *ngFor="let autor of autores" [value]="autor.idAutor">
+            {{ autor.nombreAutor }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Categoría</mat-label>
+        <mat-select formControlName="categoriaId">
+          <mat-option
+            *ngFor="let categoria of categorias"
+            [value]="categoria.idCategoria"
+          >
+            {{ categoria.nombreCategoria }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions style="float: right">
+  <button type="button" class="btn btn-secondary" (click)="onClose()">
+    Cerrar
+  </button>
+  <button
+    type="submit"
+    class="btn btn-primary ml-2"
+    [disabled]="!editForm.valid"
+    (click)="onSave()"
+  >
+    Guardar
+  </button>
+</div>
