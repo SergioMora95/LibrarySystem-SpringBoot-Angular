@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_library
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: db_library
+      MYSQL_USER: admin 
+      MYSQL_PASSWORD: 12345678
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - library_network
+
+volumes:
+  mysql-data:
+
+networks:
+  library_network:
+    driver: bridge
+
+# docker-compose up -d
+# docker exec -it mysql_db bash
