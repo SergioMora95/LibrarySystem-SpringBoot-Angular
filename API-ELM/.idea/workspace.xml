@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5460954d-c4fb-404e-a4c9-29ac26aeb9f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/API-ELM.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WEB-ELM2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/Archivo/FileSystemStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/Archivo/StorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/CrudApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/AutorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/CategoriaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/EditorialController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/HistorialPrestamoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/LibroController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/Mediacontroller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/PrestamoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/ProductoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/RecursoAudioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/RecursoDigitalController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/RecursoVideoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/RepositorioExternoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/dto/Mensaje.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/dto/ProductoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/emailpassword/config/ThymeleafTemplateConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/emailpassword/controller/EmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/emailpassword/dto/ChangePasswordDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/emailpassword/dto/EmailValuesDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/emailpassword/service/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/Autor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/Categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/Editorial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/HistorialPrestamo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/Libro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/Prestamo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/Producto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/RecursoAudio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/RecursoDigital.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/RecursoVideo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/entity/RepositorioExterno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/exceptions/CustomException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/exceptions/RestControllerException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/AutorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/CategoriaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/EditorialRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/HistorialPrestamoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/LibroRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/PrestamoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/ProductoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/RecursoAudioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/RecursoDigitalRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/RecursoVideoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/repository/RepositorioExternoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/MainSecurity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/config/BeansConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/dto/JwtDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/dto/LoginUsuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/dto/NuevoUsuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/entity/Rol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/entity/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/entity/UsuarioPrincipal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/enums/RolNombre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/jwt/JwtEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/jwt/JwtProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/jwt/JwtTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/repository/RolRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/repository/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/service/RolService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/service/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/security/service/UsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/AutorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/CategoriaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/EditorialService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/HistorialPrestamoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/LibroService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/PrestamoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/ProductoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/RecursoAudioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/RecursoDigitalService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/RecursoVideoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/service/RepositorioExternoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/swagger/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/util/CreateRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tutorial/crud/util/FileUploadUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/email-template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/emailPrestamo-template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tutorial/crud/CrudApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/Archivo/FileSystemStorageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/Archivo/StorageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/CrudApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/config/CorsConfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/config/CorsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/AutorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/CategoriaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/EditorialController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/HistorialPrestamoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/LibroController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/Mediacontroller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/PrestamoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/ProductoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/RecursoAudioController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/RecursoDigitalController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/RecursoVideoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/RepositorioExternoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/dto/Mensaje.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/dto/ProductoDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/emailpassword/config/ThymeleafTemplateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/emailpassword/controller/EmailController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/emailpassword/dto/ChangePasswordDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/emailpassword/dto/EmailValuesDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/emailpassword/service/EmailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/Autor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/Categoria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/Editorial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/HistorialPrestamo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/Libro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/Prestamo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/Producto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/RecursoAudio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/RecursoDigital.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/RecursoVideo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/entity/RepositorioExterno.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/exceptions/CustomException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/exceptions/RestControllerException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/AutorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/CategoriaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/EditorialRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/HistorialPrestamoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/LibroRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/PrestamoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/ProductoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/RecursoAudioRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/RecursoDigitalRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/RecursoVideoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/repository/RepositorioExternoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/MainSecurity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/config/BeansConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/controller/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/dto/JwtDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/dto/LoginUsuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/dto/NuevoUsuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/entity/Rol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/entity/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/entity/UsuarioPrincipal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/enums/RolNombre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/jwt/JwtEntryPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/jwt/JwtProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/jwt/JwtTokenFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/repository/RolRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/repository/UsuarioRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/service/RolService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/service/UserDetailsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/security/service/UsuarioService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/AutorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/CategoriaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/EditorialService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/HistorialPrestamoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/LibroService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/PrestamoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/ProductoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/RecursoAudioService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/RecursoDigitalService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/RecursoVideoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/service/RepositorioExternoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/swagger/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/util/CreateRoles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tutorial/crud/util/FileUploadUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/email-template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/emailPrestamo-template.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;CristianLopez3&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SergioMora95/LibrarySystem-SpringBoot-Angular.git&quot;,
+    &quot;accountId&quot;: &quot;77608ac8-7f33-4adb-a858-6ed6d8923cf3&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2pEIkeLFTFABN3YaHkmFqdD9clB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CrudApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;cristian&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cristian.lm/Desktop/code/java/LibrarySystem-SpringBoot-Angular/API-ELM&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="CrudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="SPRING_DATASOURCE_PASSWORD" value="12345678" />
+        <env name="SPRING_DATASOURCE_URL" value="jdbc:mysql://localhost:3307/db_library" />
+        <env name="SPRING_DATASOURCE_USERNAME" value="admin" />
+      </envs>
+      <module name="crud" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tutorial.crud.CrudApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5460954d-c4fb-404e-a4c9-29ac26aeb9f1" name="Changes" comment="" />
+      <created>1732324952250</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732324952250</updated>
+      <workItem from="1732324953401" duration="3284000" />
+      <workItem from="1732328296119" duration="1232000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
