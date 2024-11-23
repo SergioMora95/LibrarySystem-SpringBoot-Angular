@@ -1,8 +1,8 @@
 package com.eml.librarybackend.controller;
 
-import com.eml.librarybackend.dto.Mensaje;
-import com.eml.librarybackend.entity.RepositorioExterno;
-import com.eml.librarybackend.service.RepositorioExternoService;
+import com.eml.librarybackend.domain.dto.Mensaje;
+import com.eml.librarybackend.domain.entity.RepositorioExterno;
+import com.eml.librarybackend.domain.service.RepositorioExternoService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

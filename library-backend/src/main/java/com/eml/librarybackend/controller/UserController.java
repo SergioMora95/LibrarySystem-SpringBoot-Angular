@@ -1,8 +1,8 @@
 package com.eml.librarybackend.controller;
 
 
-import com.eml.librarybackend.security.entity.Usuario;
-import com.eml.librarybackend.security.service.UsuarioService;
+import com.eml.librarybackend.config.security.entity.Usuario;
+import com.eml.librarybackend.config.security.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

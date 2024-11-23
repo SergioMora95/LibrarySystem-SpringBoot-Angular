@@ -1,9 +1,9 @@
 package com.eml.librarybackend.controller;
 
-import com.eml.librarybackend.dto.Mensaje;
-import com.eml.librarybackend.dto.ProductoDto;
-import com.eml.librarybackend.entity.Producto;
-import com.eml.librarybackend.service.ProductoService;
+import com.eml.librarybackend.domain.dto.Mensaje;
+import com.eml.librarybackend.domain.dto.ProductoDto;
+import com.eml.librarybackend.domain.entity.Producto;
+import com.eml.librarybackend.domain.service.ProductoService;
 import io.swagger.annotations.ApiOperation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

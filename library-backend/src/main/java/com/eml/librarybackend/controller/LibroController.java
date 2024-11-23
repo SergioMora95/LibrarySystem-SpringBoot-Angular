@@ -1,14 +1,14 @@
 package com.eml.librarybackend.controller;
 
-import com.eml.librarybackend.dto.Mensaje;
-import com.eml.librarybackend.entity.Autor;
-import com.eml.librarybackend.entity.Categoria;
-import com.eml.librarybackend.entity.Editorial;
-import com.eml.librarybackend.entity.Libro;
-import com.eml.librarybackend.repository.AutorRepository;
-import com.eml.librarybackend.repository.CategoriaRepository;
-import com.eml.librarybackend.repository.EditorialRepository;
-import com.eml.librarybackend.service.LibroService;
+import com.eml.librarybackend.domain.dto.Mensaje;
+import com.eml.librarybackend.author.model.Autor;
+import com.eml.librarybackend.domain.entity.Categoria;
+import com.eml.librarybackend.domain.editorial.Editorial;
+import com.eml.librarybackend.domain.dto.Libro;
+import com.eml.librarybackend.author.repository.AutorRepository;
+import com.eml.librarybackend.domain.repository.CategoriaRepository;
+import com.eml.librarybackend.domain.repository.EditorialRepository;
+import com.eml.librarybackend.domain.service.LibroService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

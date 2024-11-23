@@ -1,8 +1,8 @@
 package com.eml.librarybackend.controller;
 
-import com.eml.librarybackend.dto.Mensaje;
-import com.eml.librarybackend.entity.HistorialPrestamo;
-import com.eml.librarybackend.service.HistorialPrestamoService;
+import com.eml.librarybackend.domain.dto.Mensaje;
+import com.eml.librarybackend.domain.entity.HistorialPrestamo;
+import com.eml.librarybackend.domain.service.HistorialPrestamoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

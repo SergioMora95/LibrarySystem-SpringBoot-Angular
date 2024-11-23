@@ -1,11 +1,11 @@
 package com.eml.librarybackend.controller;
 
-import com.eml.librarybackend.dto.Mensaje;
-import com.eml.librarybackend.entity.Prestamo;
-import com.eml.librarybackend.security.entity.Usuario;
-import com.eml.librarybackend.security.service.UsuarioService;
-import com.eml.librarybackend.service.LibroService;
-import com.eml.librarybackend.service.PrestamoService;
+import com.eml.librarybackend.domain.dto.Mensaje;
+import com.eml.librarybackend.domain.entity.Prestamo;
+import com.eml.librarybackend.config.security.entity.Usuario;
+import com.eml.librarybackend.config.security.service.UsuarioService;
+import com.eml.librarybackend.domain.service.LibroService;
+import com.eml.librarybackend.domain.service.PrestamoService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

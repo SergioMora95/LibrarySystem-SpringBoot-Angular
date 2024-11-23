@@ -1,6 +1,6 @@
 package com.eml.librarybackend.controller;
 
-import com.eml.librarybackend.Archivo.StorageService;
+import com.eml.librarybackend.domain.Archivo.StorageService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.core.io.Resource;
