@@ -12,6 +12,7 @@ Ey, welcome to the library system repository, in this moment we are working on t
 ## TO - DOs
 
 ✅ Add policies for branch protection (_to use pull requests_)
+
 ✅ Create a branch with the respective colaborator name [cristian, sergio]
 
 
