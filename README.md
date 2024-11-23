@@ -1,3 +1,5 @@
+[![Testing CI Workflow](https://github.com/SergioMora95/LibrarySystem-SpringBoot-Angular/actions/workflows/backend-ci.yaml/badge.svg)](https://github.com/SergioMora95/LibrarySystem-SpringBoot-Angular/actions/workflows/backend-ci.yaml)
+
 # Library System 📚
 
 Ey, welcome to the library system repository, in this moment we are working on the **project refactor**.
